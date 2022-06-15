@@ -37,12 +37,14 @@ jobs:
       - image: cimg/base:stable
 
     steps:
+      - attach_workspace:
+          at: ~/
+      
       - run:
           name: "Print output"
           command: cat ~/output.txt
 
-      - attach_workspace:
-          at: ~/
+      
  
 # Invoke jobs via workflows
 # See: https://circleci.com/docs/2.0/configuration-reference/#workflows
