@@ -46,7 +46,7 @@ jobs:
     steps:
       - run:
           name: "Fail Condition"
-          command: return 1
+          command: exit 1
       - run:
           name: "Action"
           command: echo "carry out failure condition"
